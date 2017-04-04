@@ -8,8 +8,8 @@
         android:id="@+id/firstNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Name"
-        android:labelFor="@id/firstNameEditText"
+        android:text="@string/firstName"
+        android:labelFor="@+id/firstNameEditText"
         android:layout_margin="16dp"/>
 
     <EditText
@@ -17,8 +17,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:layout_toRightOf="@id/firstNameLabel"
-        android:layout_alignBaseline="@id/firstNameLabel"
+        android:layout_toRightOf="@+id/firstNameLabel"
+        android:layout_alignBaseline="@+id/firstNameLabel"
         android:layout_margin="16dp"
         />
 
@@ -26,9 +26,9 @@
         android:id="@+id/lastNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last Name"
-        android:labelFor="@id/lastNameEditText"
-        android:layout_below="@id/firstNameLabel"
+        android:text="@string/lastName"
+        android:labelFor="@+id/lastNameEditText"
+        android:layout_below="@+id/firstNameLabel"
         android:layout_margin="16dp"/>
 
     <EditText
@@ -36,8 +36,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:layout_toRightOf="@id/lastNameLabel"
-        android:layout_alignBaseline="@id/lastNameLabel"
+        android:layout_toRightOf="@+id/lastNameLabel"
+        android:layout_alignBaseline="@+id/lastNameLabel"
         android:layout_margin="16dp"
         />
 
@@ -45,9 +45,9 @@
         android:id="@+id/emailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        android:labelFor="@id/emailEditText"
-        android:layout_below="@id/lastNameLabel"
+        android:text="@string/email"
+        android:labelFor="@+id/emailEditText"
+        android:layout_below="@+id/lastNameLabel"
         android:layout_margin="16dp"/>
 
     <EditText
@@ -55,20 +55,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:layout_toRightOf="@id/emailLabel"
-        android:layout_alignBaseline="@id/emailLabel"
+        android:layout_toRightOf="@+id/emailLabel"
+        android:layout_alignBaseline="@+id/emailLabel"
         android:layout_marginRight="16dp"
-        android:layout_alignLeft="@id/lastNameEditText"
+        android:layout_alignLeft="@+id/lastNameEditText"
         />
 
     <Button
         android:id="@+id/connectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect!"
-        android:layout_below="@id/emailLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        />
+        android:text="@string/connect"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/emailEditText"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
