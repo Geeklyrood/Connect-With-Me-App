@@ -1,51 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.cvtc.android.connectwithme.MainActivity">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/firstNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Name" />
+        android:text="First Name"
+        android:labelFor="@id/firstNameEditText"
+        android:layout_margin="16dp"/>
 
     <EditText
         android:id="@+id/firstNameEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@id/firstNameLabel"
+        android:layout_alignBaseline="@id/firstNameLabel"
+        android:layout_margin="16dp"
+        />
 
     <TextView
         android:id="@+id/lastNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last Name" />
+        android:text="Last Name"
+        android:labelFor="@id/lastNameEditText"
+        android:layout_below="@id/firstNameLabel"
+        android:layout_margin="16dp"/>
 
     <EditText
         android:id="@+id/lastNameEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@id/lastNameLabel"
+        android:layout_alignBaseline="@id/lastNameLabel"
+        android:layout_margin="16dp"
+        />
 
     <TextView
         android:id="@+id/emailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email" />
+        android:text="Email"
+        android:labelFor="@id/emailEditText"
+        android:layout_below="@id/lastNameLabel"
+        android:layout_margin="16dp"/>
 
     <EditText
         android:id="@+id/emailEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:layout_toRightOf="@id/emailLabel"
+        android:layout_alignBaseline="@id/emailLabel"
+        android:layout_marginRight="16dp"
+        android:layout_alignLeft="@id/lastNameEditText"
+        />
 
     <Button
         android:id="@+id/connectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect!" />
+        android:text="Connect!"
+        android:layout_below="@id/emailLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
