@@ -4,4 +4,7 @@
     <string name="firstName">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="connect">Connect!</string>
+    <string name="response_placeholder">Placeholder text is a lot of text that allows us to see how
+        the content will look on the device in preview mode before we actually run the application
+        on the emulator.</string>
 </resources>

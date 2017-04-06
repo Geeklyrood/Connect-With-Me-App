@@ -1,5 +1,6 @@
 package edu.cvtc.android.connectwithme;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Log.d("connect_with_me", "Connect button was clicked!");
 
-        // TODO: retrieve the connection data and present a new Activity
+        final String firstName = firstNameEditText.getText().toString();
+        final String lastName = lastNameEditText.getText().toString();
+        final String email = emailEditText.getText().toString();
+
+        if (firstName != null && !firstName.isEmpty()
+                && lastName != null && !lastName.isEmpty()
+                && email != null && !email.isEmpty()) {
+
+            final Intent intent = new Intent(getApplicationContext(), ResponseActivity.class);
+            intent.putExtra("firstName", firstName);
+            intent.putExtra("lastName", lastName);
+            intent.putExtra("email", email);
+
+            startActivity(intent);
+
+        } else {
+            // TODO: Display validation message
+        }
     }
 }
