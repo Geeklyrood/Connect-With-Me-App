@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
 
         } else {
-            // TODO: Display validation message
+            Toast.makeText(getApplicationContext(), "You must complete all fields!", Toast.LENGTH_SHORT).show();
         }
     }
 }
